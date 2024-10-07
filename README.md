@@ -55,7 +55,7 @@ DuckHuntGame (Singleton)
     * **Longueur du chemin:** La distance totale parcourue par le joueur pour atteindre le canard cible.
     * **Temps d'exécution:** Le temps nécessaire à l'algorithme pour calculer le plus court chemin.
     * **Précision:** Le pourcentage de cas de test où l'algorithme trouve avec succès le plus court chemin.
-* **Configuration expérimentale:** Spécifier l'environnement matériel et logiciel utilisé pour l'évaluation, y compris le langage de programmation et les bibliothèques pertinentes.
+
 
 ### **Résultats**
 * **Présentation des données:** Présenter les résultats de l'évaluation de manière claire et concise, en utilisant des tableaux, des graphiques ou d'autres visualisations.
@@ -65,7 +65,7 @@ DuckHuntGame (Singleton)
 * **Résumé:** Résumer les principales conclusions de l'évaluation, en soulignant les forces et les faiblesses de l'algorithme de Dijkstra dans le contexte de Duck Hunt.
 * **Recommandations:** Sur la base des résultats de l'évaluation, fournir des recommandations pour d'éventuelles améliorations ou approches alternatives qui pourraient être envisagées.
 
-**Exemple de tableau Markdown pour les résultats:**
+**Exemple de tableau Markdown pour les résultats (Optionel):**
 
 | Cas de test | Longueur du chemin | Temps d'exécution | Précision |
 |---|---|---|---|
@@ -74,4 +74,4 @@ DuckHuntGame (Singleton)
 | 3 | 85 | 0,020 | 95% |
 | ... | ... | ... | ... |
 
-**Remarque:** Ce modèle fournit une structure générale pour l'évaluation. Vous devrez peut-être l'adapter à vos besoins spécifiques et à la complexité de votre implémentation.
+**Remarque:** Ce modèle fournit une structure générale pour l'évaluation. Vous devrez peut-être l'adapter à vos besoins spécifiques et à la complexité de votre implémentation. Le tableau final n'est pas demandé pour aujourd'hui
