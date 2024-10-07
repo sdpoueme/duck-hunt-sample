@@ -46,6 +46,8 @@ Our game will feature the following objects:
 
 
 
+#  Logique de l'engin de Jeu 
+
 ## **Évaluation de l'algorithme de Dijkstra dans Duck Hunt**
 
 ### **Algorithme de Dijkstra et Duck Hunt**
