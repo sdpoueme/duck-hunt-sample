@@ -8,25 +8,17 @@ Notre implémentation de base de la chasse au canard permettra au joueur de choi
 
 Voici notre hiérarchie de jeu :
 
-```mermaid
-flowchart LR
-    subgraph DuckHuntGame
-        direction TB
-        A((DuckHuntGame)) --> B{GameLeaderboard}
-        A --> C{GameMatch}
-    end
-    subgraph GameMatch
-        direction TB
-        C --> D{GamePlayer}
-        C --> E{GameDucks}
-        E --> F{NormalDucks}
-        E --> G{FlyingDucks}
-        C --> H{GameEnvironment}
-        H --> I{ForestBackground}
-        H --> J{Trees}
-        H --> K{Music}
-    end
-
+DuckHuntGame (Singleton)
+        - GameLeaderboard (Singleton)
+        - GameMatch
+          - GamePlayer
+          - GameDucks (Factory)
+            - NormalDucks
+            - FlyingDucks
+          - GameEnvironment (Composite)
+            - ForestBackground
+            - Trees
+            - Music
 
 - classe a: DuckHuntGame
 
