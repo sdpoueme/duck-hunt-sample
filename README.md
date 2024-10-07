@@ -1,28 +1,31 @@
-# duck-hunt-sample
+# **duck-hunt-sample**
 
-Welcome to this code sample showing how to build a duck hunt project in Unity. 
+# **Description du jeu**
 
-# Game description
+Notre implémentation de base de la chasse au canard permettra au joueur de choisir un niveau de difficulté lors du lancement du jeu. Le joueur utilisera une arme pour faire autant de coups que possible sur des canards en vol. Le jeu se déroulera dans un paysage forestier.
 
-Our basic duck hunt implementation will allow a player to choose a difficulty level when lauching the game. The player will use a weapon to make as many hits as possible on flying ducks. The game will take place in a forest landscape. 
+# **Architecture**
 
-# Architecture
+Voici notre hiérarchie de jeu :
 
-Here is our game hierarchy:
-
-    DuckHuntGame (Singleton)
-        - GameLeaderboard (Singleton)
-        - GameMatch
-          - GamePlayer
-          - GameDucks (Factory)
-            - NormalDucks
-            - FlyingDucks
-          - GameEnvironment (Composite)
-            - ForestBackground
-            - Trees
-            - Music
-          
-Our game will feature the following objects:
+```mermaid
+flowchart LR
+    subgraph DuckHuntGame
+        direction TB
+        A((DuckHuntGame)) --> B{GameLeaderboard}
+        A --> C{GameMatch}
+    end
+    subgraph GameMatch
+        direction TB
+        C --> D{GamePlayer}
+        C --> E{GameDucks}
+        E --> F{NormalDucks}
+        E --> G{FlyingDucks}
+        C --> H{GameEnvironment}
+        H --> I{ForestBackground}
+        H --> J{Trees}
+        H --> K{Music}
+    end
 
 
 - classe a: DuckHuntGame
