@@ -9,16 +9,16 @@ Notre implémentation de base de la chasse au canard permettra au joueur de choi
 Voici notre hiérarchie de jeu :
 
 DuckHuntGame (Singleton)
-        - GameLeaderboard (Singleton)
-        - GameMatch
-          - GamePlayer
-          - GameDucks (Factory)
-            - NormalDucks
-            - FlyingDucks
-          - GameEnvironment (Composite)
-            - ForestBackground
-            - Trees
-            - Music
+- GameLeaderboard (Singleton)
+- GameMatch
+  - GamePlayer
+  - GameDucks (Factory)
+    - NormalDucks
+    - FlyingDucks
+  - GameEnvironment (Composite)
+    - ForestBackground
+    - Trees
+    - Music
 
 - classe a: DuckHuntGame
 
