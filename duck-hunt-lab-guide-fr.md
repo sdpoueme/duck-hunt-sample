@@ -2,7 +2,7 @@
 
 ## Configuration Initiale
 
-1. Créez un nouveau projet Unity 2D
+1. Dans votre projet d'équipe Unity
 2. Configurez votre scène :
    - Créez un GameObject vide nommé "GameManager"
    - Créez un Canvas UI avec un élément Text (TextMeshPro) pour le score
