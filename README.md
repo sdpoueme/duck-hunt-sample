@@ -49,29 +49,18 @@ DuckHuntGame (Singleton)
 * **Description de l'algorithme:** Fournir une explication claire de l'algorithme de Dijkstra, y compris ses étapes et son fonctionnement.
 * **Application à Duck Hunt:** Discuter de la manière dont l'algorithme de Dijkstra peut être adapté au jeu Duck Hunt, comme représenter la carte du jeu sous forme de graphe et déterminer le plus court chemin vers le canard cible.
 
-### **Méthodologie d'évaluation**
-* **Cas de test:** Décrire les cas de test ou les scénarios spécifiques qui seront utilisés pour évaluer les performances de l'algorithme. Cela peut inclure différentes configurations de cartes, des positions de canards et des points de départ du joueur.
-* **Métriques:** Définir les métriques qui seront utilisées pour mesurer l'efficacité de l'algorithme, telles que :
-    * **Longueur du chemin:** La distance totale parcourue par le joueur pour atteindre le canard cible.
-    * **Temps d'exécution:** Le temps nécessaire à l'algorithme pour calculer le plus court chemin.
-    * **Précision:** Le pourcentage de cas de test où l'algorithme trouve avec succès le plus court chemin.
+# Description du Game Manager
 
+## GameManager.cs Overview
+🎮 Core Purpose
+Duck hunting game manager in Unity
 
-### **Résultats**
-* **Présentation des données:** Présenter les résultats de l'évaluation de manière claire et concise, en utilisant des tableaux, des graphiques ou d'autres visualisations.
-* **Analyse:** Analyser les résultats et discuter des conclusions, en comparant les performances de l'algorithme de Dijkstra à d'autres approches potentielles ou méthodes de référence.
+Controls duck spawning, scoring, and game mechanics
 
-### **Conclusion**
-* **Résumé:** Résumer les principales conclusions de l'évaluation, en soulignant les forces et les faiblesses de l'algorithme de Dijkstra dans le contexte de Duck Hunt.
-* **Recommandations:** Sur la base des résultats de l'évaluation, fournir des recommandations pour d'éventuelles améliorations ou approches alternatives qui pourraient être envisagées.
+🔑 Key Components
+Duck Management
+```bash
+private List<Duck> activeDucks = new List<Duck>();
+private List<Duck> killedDucks = new List<Duck>();
+```
 
-**Exemple de tableau Markdown pour les résultats (Optionel):**
-
-| Cas de test | Longueur du chemin | Temps d'exécution | Précision |
-|---|---|---|---|
-| 1 | 100 | 0,025 | 100% |
-| 2 | 120 | 0,030 | 100% |
-| 3 | 85 | 0,020 | 95% |
-| ... | ... | ... | ... |
-
-**Remarque:** Ce modèle fournit une structure générale pour l'évaluation. Vous devrez peut-être l'adapter à vos besoins spécifiques et à la complexité de votre implémentation. Le tableau final n'est pas demandé pour aujourd'hui
