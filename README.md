@@ -1,66 +1,63 @@
-# **duck-hunt-sample**
+# Duck Hunt Sample
 
-# **Description du jeu**
+A modern take on the classic Duck Hunt game, implemented in Unity.
 
-Notre implémentation de base de la chasse au canard permettra au joueur de choisir un niveau de difficulté lors du lancement du jeu. Le joueur utilisera une arme pour faire autant de coups que possible sur des canards en vol. Le jeu se déroulera dans un paysage forestier.
+## Description
 
-# **Architecture**
+This project is a simple implementation of a Duck Hunt-style game. Players attempt to shoot ducks as they fly across the screen. The game features different types of ducks, each with unique characteristics and point values.
 
-Voici notre hiérarchie de jeu :
+## Features
 
-DuckHuntGame (Singleton)
-- GameLeaderboard (Singleton)
-- GameMatch
-  - GamePlayer
-  - GameDucks (Factory)
-    - NormalDucks
-    - FlyingDucks
-  - GameEnvironment (Composite)
-    - ForestBackground
-    - Trees
-    - Music
+- Multiple duck types: Normal, Fast, and Golden
+- Point system based on duck type
+- Ducks escape if not shot within a time limit
+- Simple click-to-shoot mechanics
 
-- classe a: DuckHuntGame
+## Key Components
 
-| Attribut | Fonctions |
-|---------:|-----------|
-| string uuid |  |
-| GameLeaderboard ld | BuildGameEnvironment() |
-| list GameMatch | launchGameMatch() |
+### DuckController.cs
 
+This script manages the behavior of individual ducks in the game.
 
-- classe b: GameMatch
-  
-| Attribut | Fonctions |
-|---------:|-----------|
-| string id | public setGameMathId(), public getGameMatchId() |
-| int score | private setGameScore() |
-| gameEnvironment ge | private gameEnvironment () |
-| GamePlayer player1 | public getPlayerInfo() |
-| GameDucks ennemies | public spawnDucks() |
+#### Duck Properties
+- `type`: Determines the duck's type (Normal, Golden, or Fast)
+- `isAlive`: Tracks if the duck is still active
+- `speed`: Controls how fast the duck moves
+- `pointsValue`: Defines how many points the duck is worth
+- `direction`: Sets the direction of duck movement
+- `escapeDuration`: Determines how long a duck stays on screen before escaping
 
+#### Main Functions
+- `Initialize`: Sets up duck properties based on its type
+- `Update`: Handles duck movement, lifespan, and player interaction
+- `OnMouseDown`: Manages what happens when a duck is shot
 
+## How to Use
 
-#  Logique de l'engin de Jeu 
+1. Attach the `DuckController` script to duck prefabs in your Unity project.
+2. Implement a spawn system to create ducks in your game scene.
+3. Create a UI to display the player's score.
+4. Implement game logic to handle scoring and game flow.
 
-## **Évaluation de l'algorithme de Dijkstra dans Duck Hunt**
+## Customization
 
-### **Algorithme de Dijkstra et Duck Hunt**
-* **Description de l'algorithme:** Fournir une explication claire de l'algorithme de Dijkstra, y compris ses étapes et son fonctionnement.
-* **Application à Duck Hunt:** Discuter de la manière dont l'algorithme de Dijkstra peut être adapté au jeu Duck Hunt, comme représenter la carte du jeu sous forme de graphe et déterminer le plus court chemin vers le canard cible.
+You can easily customize the game by adjusting the following:
+- Duck speeds
+- Point values for different duck types
+- Escape duration for ducks
+- Spawn rates and patterns
 
-# Description du Game Manager
+## Future Improvements
 
-## GameManager.cs Overview
-🎮 Core Purpose
-Duck hunting game manager in Unity
+- Add sound effects for shooting and duck movements
+- Implement different backgrounds or levels
+- Create a high score system
+- Add power-ups or special events
 
-Controls duck spawning, scoring, and game mechanics
+## Contributing
 
-🔑 Key Components
-Duck Management
-```bash
-private List<Duck> activeDucks = new List<Duck>();
-private List<Duck> killedDucks = new List<Duck>();
-```
+Contributions to improve the game are welcome. Please feel free to fork the repository and submit pull requests.
 
+## License
+
+[Include your chosen license here]
