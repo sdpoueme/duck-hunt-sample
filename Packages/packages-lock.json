@@ -362,7 +362,7 @@
       "url": "https://packages.unity.com"
     },
     "io.realm.unity": {
-      "version": "file:/Users/pouemes/Downloads/io.realm.unity-12.4.1.tgz",
+      "version": "file:../realm/io.realm.unity-12.4.1.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {}
