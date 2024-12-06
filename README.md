@@ -12,6 +12,7 @@ This project is a simple implementation of a Duck Hunt-style game. Players attem
 - Point system based on duck type
 - Ducks escape if not shot within a time limit
 - Simple click-to-shoot mechanics
+- Utilizes Unity's Universal Render Pipeline (URP) for enhanced graphics
 
 ## Key Components
 
